@@ -3,7 +3,8 @@ import React from 'react';
 import { HashRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 // FIX: `useAuth` is defined in `hooks/useAuth.ts`, not `contexts/AuthContext.tsx`.
-import { AuthProvider } from './contexts/AuthContext';
+// FIX: Corrected import path for AuthProvider to its actual location.
+import { AuthProvider } from './components/admin/AuthContext';
 import { useAuth } from './hooks/useAuth';
 
 import Header from './components/Header';
@@ -11,7 +12,8 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import AdminLoginPage from './pages/AdminLoginPage';
+// FIX: Corrected import path for AdminLoginPage to its actual location.
+import AdminLoginPage from './utils/AdminLoginPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 
 const Layout: React.FC = () => {

@@ -2,7 +2,8 @@
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { adminLogin } from '../services/api';
 
-interface AuthContextType {
+// FIX: Export interface to allow type inference across modules.
+export interface AuthContextType {
   isAdminAuthenticated: boolean;
   login: (username: string, password: string) => Promise<boolean>;
   logout: () => void;
